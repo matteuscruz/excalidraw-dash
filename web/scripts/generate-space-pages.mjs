@@ -53,8 +53,8 @@ for (const fileName of spaceFiles) {
   console.log(`Gerado dist/${slug}/index.html`);
 }
 
-const listItems = slugs
-  .map((slug) => `      <li><a href="./${slug}/">${slug}</a></li>`)
+const blocos = slugs
+  .map((slug) => `      <a class="bloco" href="./${slug}/">${slug}</a>`)
   .join("\n");
 
 const indexHtml = `<!doctype html>
@@ -64,16 +64,50 @@ const indexHtml = `<!doctype html>
     <title>Excalidraw Spaces</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 4rem auto; padding: 0 1rem; }
-      ul { padding-left: 1.25rem; }
-      li { margin: 0.5rem 0; }
+      body {
+        background-color: #000000;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        background-color: #1e1e20;
+        padding: 24px;
+        border-radius: 12px;
+      }
+
+      .grid-modulos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .bloco {
+        background-color: #0a0a0a;
+        color: #ffffff;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 40px 30px;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 140px;
+      }
     </style>
   </head>
   <body>
-    <h1>Excalidraw Spaces</h1>
-    <ul>
-${listItems}
-    </ul>
+    <div class="container">
+      <div class="grid-modulos">
+${blocos}
+      </div>
+    </div>
   </body>
 </html>
 `;

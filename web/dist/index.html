@@ -5,15 +5,49 @@
     <title>Excalidraw Spaces</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 4rem auto; padding: 0 1rem; }
-      ul { padding-left: 1.25rem; }
-      li { margin: 0.5rem 0; }
+      body {
+        background-color: #000000;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        background-color: #1e1e20;
+        padding: 24px;
+        border-radius: 12px;
+      }
+
+      .grid-modulos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .bloco {
+        background-color: #0a0a0a;
+        color: #ffffff;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 40px 30px;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 140px;
+      }
     </style>
   </head>
   <body>
-    <h1>Excalidraw Spaces</h1>
-    <ul>
-      <li><a href="./SOM/">SOM</a></li>
-    </ul>
+    <div class="container">
+      <div class="grid-modulos">
+      <a class="bloco" href="./SOM/">SOM</a>
+      </div>
+    </div>
   </body>
 </html>
