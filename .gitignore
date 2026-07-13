@@ -1,5 +1,7 @@
 spaces/*.excalidraw
 web/spaces.passwords.local.json
-web/dist/
 web/node_modules/
 web/.staticrypt.json
+
+# web/dist/ é commitado de propósito: só chega aqui depois de gerado e
+# cifrado por `npm run build`, nunca contém o desenho em texto plano.
