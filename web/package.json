@@ -1,0 +1,24 @@
+{
+  "name": "excalidraw-dash-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/generate-space-pages.mjs && node scripts/encrypt-spaces.mjs",
+    "deploy": "gh-pages -d dist",
+    "publish": "npm run build && npm run deploy"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "gh-pages": "^6.3.0",
+    "staticrypt": "^3.5.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
+}

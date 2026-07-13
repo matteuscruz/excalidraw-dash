@@ -1,0 +1,5 @@
+spaces/*.excalidraw
+web/spaces.passwords.local.json
+web/dist/
+web/node_modules/
+web/.staticrypt.json
